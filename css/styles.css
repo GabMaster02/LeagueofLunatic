@@ -1,0 +1,266 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ html{
+	 scroll-behavior: smooth;
+ }
+
+:root {
+	--purple-dark: #170312;
+	--purple-medium: #33032d;
+    --purple-light: #531253;
+    --gray-light: #eaeaea;
+    --white: #f4fffd;
+}
+
+body {
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+p {
+	font-size: 22px;
+}
+
+/* ------------------------- */
+/* Cabeza */
+/* ------------------------- */
+.contenido-header {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/LeagueofLegends.png);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+/* ------------------------- */
+/*Barra de Navegacion */
+/* ------------------------- */
+.menu {
+	background-color: #36221c;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	padding: 5px;
+	z-index: 999;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	font-family: 'Noto Serif', serif;
+	font-style: italic;
+	margin-bottom: 60px;
+}
+
+.menu a {
+	display: inline-block;
+	padding: 10px 30px;
+	font-size: 26px;
+	background-color: #36221c;
+	margin: 0 10px;
+	transition: .5s ease all;
+	color: #6e5e04;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	transform: translateY(18px);
+	background-color: #36221c;
+}
+
+/* ------------------------- */
+/* Nosotros */
+/* ------------------------- */
+.nosotros {
+	margin-bottom: 60px;
+}
+
+.subtitulo {
+	font-size: 20px;
+	color: var(--purple-dark);
+	font-family: 'Noto Serif', serif;
+	font-weight: 700;
+	z-index: 2;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.subtitulo span {
+	background-color: var(--gray-light);
+	padding: 0 15px;
+	z-index: 99;
+	position: relative;
+}
+
+.subtitulo::after {
+	content: "";
+	display: inline-block;
+	height: 2px;
+	width: 100%;
+	background: var(--purple-dark);
+	position: relative;
+	top: -29px;
+	z-index: 1;
+}
+
+.nosotros .titulo {
+	width: 70%;
+	font-size: 44px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 50px;
+	color: #6e5e04;
+}
+
+
+
+/* ------------------------- */
+/* Productos */
+/* ------------------------- */
+.productos {
+	background: #aca4a2;
+	padding: 20px;
+	margin-bottom: 60px;
+}
+
+.productos .titulo {
+	width: 70%;
+	font-size: 34px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 50px;
+	color: #6e5e04;
+}
+
+.productos .producto {
+	position: relative;
+	width: 100%;
+}
+
+.productos .overlay {
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #6e5e04;;
+	overflow: hidden;
+	transition: .5s ease;
+}
+
+
+
+/* ------------------------- */
+/* Separador */
+/* ------------------------- */
+
+.separador0 {
+	width: 100%;
+	height: 500px;
+	background-image: url('../img/league-of-legends-colash.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 60px;
+}
+
+.separador1 {
+	width: 100%;
+	height: 500px;
+	background-image: url('../img/runas2.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 60px;
+}
+.separador1 p {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-family: 'Noto Serif', serif;
+	padding: 10px;
+}
+
+.separador2 {
+	width: 100%;
+	height: 350px;
+	background-image: url('../img/Objetos.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 60px;
+}
+
+.separador2 p {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-family: 'Noto Serif', serif;
+	padding: 10px;
+}
+
+/* ------------------------- */
+/* Acerca de */
+/* ------------------------- */
+.acerca-de {
+	margin-bottom: 60px;
+}
+
+.productos .producto:hover .overlay{
+	width: 100%;
+	opacity: .8;
+}
+
+.productos .producto .overlay-texto {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	white-space: nowrap;
+	color: var(--white);
+	font-size: 18px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+
+.redes-sociales {
+	padding: 10px;
+	background-color: #36221c;
+	color:#6e5e04;
+}
+
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 992px) {
+	p {
+		font-size: 18px;
+	}
+
+	.contenido-header .texto {
+		font-size: 60px;
+	}
+
+	.menu a {
+		font-size: 20px;
+	}
+
+	.nosotros .titulo,
+	.productos .titulo {
+		font-size: 30px;
+	}
+
+}
